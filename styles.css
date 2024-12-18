@@ -1,0 +1,674 @@
+/* Основний стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffcccb, #fff6a2);
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff4500;
+    color: white;
+    padding: 15px 20px;
+    position: relative; /* Для позиціонування кнопки замовлення */
+}
+
+header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Навігаційні кнопки */
+
+nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Центрує кнопки навігації */
+    flex-grow: 1; /* Заповнює простір між логотипом і кнопкою замовлення */
+}
+
+nav div {
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav div p {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер для кнопок "Замовлення" та "Увійти" */
+.header-buttons {
+    display: flex;
+    justify-content: flex-end; /* Вирівнюємо кнопки справа */
+    gap: 20px; /* Простір між кнопками */
+    align-items: center;
+    position: relative; /* Це для позиціонування кнопки "Замовлення" */
+}
+
+/* Кнопка замовлення */
+.order-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffa500;
+    border-radius: 5px;
+}
+
+.order-button img {
+    margin-right: 8px;
+}
+
+/* Кнопка до замовлення */
+.custom-button {
+    background-color:  #ffa500; /* Синій колір фону */
+    color: white; /* Білий текст */
+    font-size: 18px; /* Розмір тексту */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    border: none; /* Прибрати рамку */
+    border-radius: 5px; /* Закруглені кути */
+    cursor: pointer; /* Змінити курсор на "руку" */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація змін */
+}
+
+/* Ефект при наведенні */
+.custom-button:hover {
+    background-color: #0056b3; /* Темніший синій */
+    transform: scale(1.05); /* Збільшення при наведенні */
+}
+
+/* Ефект при натисканні */
+.custom-button:active {
+    background-color: #003f7f; /* Ще темніший синій */
+    transform: scale(0.95); /* Легке зменшення */
+}
+
+
+/* Кнопка "Увійти" */
+.login-button {
+    background-color: #ff4500; /* Задаємо колір для кнопки увійти */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #ffa500; /* Можна додати ефект при наведенні */
+}
+
+.invisible-border {
+    padding: 20px;
+    border: none; /* Прозора рамка */
+    background-color: none; /* Напівпрозорий фон */
+    border-radius: 10px; /* Заокруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
+    font-family: Arial, sans-serif; /* Шрифт */
+    color: #333; /* Колір тексту */
+    max-width: 800px; /* Максимальна ширина */
+    margin: 20px auto; /* Центрування на сторінці */
+}
+
+/* Слайдер */
+.slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 0 30px; /* Простір для бокових стрілок */
+    max-width: 1200px; /* Обмеження ширини */
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
+    max-width: 100%;
+}
+
+.slide {
+    border: 3px solid #ffa500; /* Помаранчева рамка */
+    flex: 0 0 calc(33.33% - 20px); /* Три слайди на ряд */
+    max-width: 300px; /* Максимальна ширина для кожного слайда */
+    background: #f7dd69;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ефект при наведенні */
+.slide:hover {
+    transform: scale(1.05); /* Легке збільшення слайда */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Стрілки */
+.arrow {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: #ff6347; /* Зміна кольору при наведенні */
+}
+
+.left-arrow {
+    left: 15px;
+}
+
+.right-arrow {
+    right: 15px;
+}
+
+.info-box {
+    width: 550px; /* Ширина квадрата */
+    height: 260px; /* Висота квадрата */
+    border: 2px solid #ff4500; /* Рамка навколо тексту */
+    padding: 15px; /* Відступи всередині квадрата */
+    overflow-y: auto; /* Додає скролінг, якщо текст виходить за межі квадрата */
+    margin: 20px auto; /* Вирівнювання по центру сторінки */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    background-color: #f7dd69; /* Фоновий колір */
+    border-radius: 10px; /* Закруглені кути, якщо потрібно */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додає тінь */
+}
+
+.text-box {
+    width: 550px; /* Ширина квадрата */
+    height: 200px; /* Висота квадрата */
+    border: 2px solid #ff4500; /* Рамка навколо тексту */
+    padding: 15px; /* Відступи всередині квадрата */
+    overflow-y: auto; /* Додає скролінг, якщо текст виходить за межі квадрата */
+    margin: 20px auto; /* Вирівнювання по центру сторінки */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    background-color: #f7dd69; /* Фоновий колір */
+    border-radius: 10px; /* Закруглені кути, якщо потрібно */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додає тінь */
+}
+
+
+/* ===== Категорії ===== */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px 0;
+}
+
+.category-buttons button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.category-buttons button:hover {
+    background-color: #ff4500;
+}
+
+/* Вирівнювання списків */
+.facts ul, .about p {
+    text-align: center;
+    list-style-position: inside; /* Робимо крапки ближче до тексту */
+}
+
+/* Основний стиль для списків */
+.facts ul {
+    list-style-position: inside; /* Вирівнювання крапок з текстом */
+    margin: 0 auto; /* Центрування списку */
+    padding: 0;
+    max-width: 400px; /* Обмеження ширини списку */
+    text-align: left; /* Текст вирівняний по лівому краю */
+    word-wrap: break-word; /* Розрив тексту для запобігання виходу за межі */
+}
+
+.facts li {
+    margin: 10px 0; /* Простір між елементами списку */
+    line-height: 1.6; /* Збільшення міжрядкового інтервалу */
+}
+
+/* Опис під бургером */
+.burger-section h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Секції */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff4500;
+    color: white;
+    position: relative; /* Використовуйте fixed, якщо футер має завжди залишатися внизу */
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+}
+
+
+
+/* Модальне вікно */
+
+.modal {
+    position: fixed; /* Виводить модальне вікно з потоку сторінки */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Вище за інші елементи */
+}
+
+#order-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; /* Змінено з none на flex */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Вище, ніж затемнення */
+    visibility: hidden; /* Додаємо для початкового приховування */
+    opacity: 0; /* Додаємо для плавного переходу */
+    transition: visibility 0.3s, opacity 0.3s; /* Плавний перехід */
+}
+
+#order-modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Стилі для затемнення фону */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Приховуємо за замовчуванням */
+}
+
+#modal-overlay.visible {
+    display: block; /* Показуємо затемнення */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    z-index: 1001; /* Вище, ніж затемнення */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.categories label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Бургер-меню */
+.burger-section img {
+    border: 5px solid #ffa500; /* Помаранчева рамка */
+    border-radius: 15px; /* Згладжені кути */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Тінь */
+    margin: 20px auto; /* Відступи та вирівнювання */
+    display: block; /* Центрування зображення */
+    max-width: 90%; /* Щоб не виходило за межі контейнера */
+}
+
+/* Меню */
+#menu {
+    padding: 20px;
+}
+
+#menu-list {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item label {
+    margin-left: 8px;
+}
+
+
+#menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.menu-item {
+    background-color: #f7dd69;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+}
+
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Стилі для замовлення */
+#selected-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-items ul li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#items-list {
+    margin: 20px 0;
+}
+
+/* Стилі для кнопок та списків страв */
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Сітка*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Елементи*/
+.item {
+    background-color: #f7dd69;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, border 0.2s;
+    border: 3px solid #ffa500;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    border: 3px solid #ff4500;
+}
+
+/* Заголовки*/
+.grid h2 {
+    grid-column: 1 / -1;
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #ff4500;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;                  
+    height: auto;                 
+    margin-right: 15px;           
+}
+
+
+/* Медіа-запити для адаптивності */
+
+/* Екрани до 1024px (планшети) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-buttons {
+        flex-direction: column;
+    }
+
+    nav div {
+        width: 100%;
+    }
+
+    .slide {
+        flex: 0 0 calc(50% - 20px); /* Два слайди на ряд для планшетів */
+    }
+}
+
+/* Екрани до 768px (мобільні телефони) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header a button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    nav div {
+        border-width: 3px;
+        padding: 8px;
+    }
+
+    .category-buttons a button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .burger-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .facts, .about {
+        padding: 10px;
+    }
+
+    .slide {
+        flex: 0 0 calc(100% - 20px); /* Один слайд на ряд для мобільних */
+    }
+
+    .arrow {
+        padding: 8px 12px; /* Менші стрілки */
+        font-size: 1.2rem;
+    }
+}
+
+/* Екрани до 480px (маленькі мобільні телефони) */
+@media (max-width: 480px) {
+    nav div {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    nav div a {
+        margin: 0 3px;
+        font-size: 12px;
+    }
+
+    .category-buttons a button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .header-buttons button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .facts, .about {
+        padding: 5px;
+    }
+
+    footer {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .slider-container {
+        padding: 0 10px; /* Зменшення внутрішніх відступів */
+    }
+
+    .slide {
+        flex: 0 0 calc(100% - 10px); /* Повна ширина для одного слайда */
+        max-width: 100%;
+        padding: 8px; /* Менший внутрішній відступ */
+    }
+
+    .slide p {
+        font-size: 0.8rem; /* Ще більше зменшено текст */
+    }
+
+    .arrow {
+        padding: 6px 10px; /* Зменшено розмір стрілок */
+        font-size: 1rem; /* Зменшено розмір шрифту стрілок */
+    }
+}
