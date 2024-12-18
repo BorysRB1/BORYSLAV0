@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORYSLAV0 - Restoran</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+        <a href="boryslav0.html">
+        <button type="submit" class="button" role="button"><img src="golovna/pig.jpg" alt=""></button>
+        </a>
+    <nav>
+        <!-- Посилання на різні меню -->
+        <div>
+            <p style="margin: 0; font-weight: bold;">Посилання на різні меню:</p>
+            <a href="waters.html" style="margin: 0 5px;">Напої</a>
+            <a href="restoran.html" style="margin: 0 5px;">Ресторанні страви</a>
+            <a href="snack.html" style="margin: 0 5px;">Швидкий Перекус</a>
+        </div>
+    </nav>
+    <div class="header-buttons">
+        <!-- Кнопка до замовлення -->
+        <button id="go-to-order" class="custom-button">Перейти до замовлення</button>
+        
+        <!-- Кнопка увійти справа -->
+        <button class="login-button" onclick="location.href='login.html'">Увійти</button>
+    </div>
+</header>
+
+<main>
+    <section class="grid">
+        <h2>Основні страви</h2>
+        <div class="item">
+            <img src="restoran/Медальйони з свинини.png" alt="pig">
+            <p>Медальйони з свинини - 245₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Медальйони з яловичини.png" alt="big_h">
+            <p>Медальйони з яловичини - 350₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Запечена половина курчати.jpg" alt="Anton">
+            <p>Запечена половина курчати - 210₴</p>
+        </div>
+
+        <h2>Гарячі закуски</h2>
+        <div class="item">
+            <img src="restoran/Хвости королівських креветок у сухарях.png" alt="krivetka">
+            <p>Хвости королівських креветок у сухарях - 320₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Реберця свинячі у гранатовому соусі.jpg" alt="rebra">
+            <p>Реберця свинячі у гранатовому соусі - 315₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Млинці з білими грибами і томатами.png" alt="mlunci">
+            <p>Млинці з білими грибами і томатами - 190₴</p>
+        </div>
+
+        <h2>Салати</h2>
+        <div class="item">
+            <img src="restoran/Салат з тунцем.jpg" alt="tunec">
+            <p>Салат з тунцем - 290₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Салат цезар з куркою.png" alt="s_anton">
+            <p>Салат цезар з куркою - 240₴</p>
+        </div>
+        <div class="item">
+            <img src="restoran/Салат з філе лосося та манго.png" alt="salat_los">
+            <p>Салат з філе лосося та манго - 330₴</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p> © 2024 BORYSLAV0. Усі права захищено.</p>
+    <p>  Телефон: 067 343 4444;</p>
+</footer>
+<script>
+    document.getElementById('go-to-order').addEventListener('click', function () {
+        // Перенаправлення на сторінку з параметром
+        window.location.href = 'boryslav0.html?openModal=true';
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
