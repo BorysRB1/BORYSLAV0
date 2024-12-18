@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORYSLAVO</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+        <a href="boryslav0.html">
+        <button type="submit" class="button" role="button"><img src="golovna/pig.jpg" alt=""></button>
+        </a>
+    <nav>
+        <!-- Посилання головної сторінки -->
+        <div style="border: 1px solid #c54111; padding: 5px; display: inline-block;">
+            <p style="margin: 0; font-weight: bold;">Посилання головної сторінки:</p>
+            <a href="#top-dishes" style="margin: 0 5px;">Топ страв</a>
+            <a href="#facts" style="margin: 0 5px;">Цікаві факти</a>
+            <a href="#about" style="margin: 0 5px;">Про нас</a>
+        </div>
+    
+        <!-- Посилання на різні меню -->
+        <div style="border: 1px solid #c54111; padding: 5px; display: inline-block;">
+            <p style="margin: 0; font-weight: bold;">Посилання на різні меню:</p>
+            <a href="waters.html" style="margin: 0 5px;">Напої</a>
+            <a href="restoran.html" style="margin: 0 5px;">Ресторанні страви</a>
+            <a href="snack.html" style="margin: 0 5px;">Швидкий Перекус</a>
+        </div>
+    </nav>
+    <div class="header-buttons">
+        <button class="order-button" onclick="openModal()">
+            <img src="golovna/buy.png" alt="Кошик">
+            Замовлення
+        </button>
+        
+        <button class="login-button" onclick="location.href='login.html'">Увійти</button>
+    </div>
+</header>
+
+<main>
+    <section class="burger-section" id="top-dishes">
+        <img src="golovna/burger.jpg" alt="Бургер">
+        <h2>З'їси мене</h2>
+        <div class="invisible-border">
+        <h3>  Якщо ви шукаєте справжню гастрономічну насолоду, наш фірмовий бургер — це саме те, що вам потрібно!  
+            Виготовлений із соковитої котлети зі 100% натурального м’яса, свіжих овочів, ніжного сиру та нашого унікального соусу, цей бургер стане вашим улюбленим.  
+            Ідеально просмажена булочка з легким хрустом додає йому особливого шарму.  </h3>
+        </div>
+    </section>
+
+    <section class="slider-container">
+        <button class="arrow left-arrow">&lt;</button>
+        <div class="slider" id="slider"></div>
+        <button class="arrow right-arrow">&gt;</button>
+    </section>
+
+    <div class="category-buttons">
+        <a href="waters.html"><button id="water-button">Напої</button></a>
+        <a href="restoran.html"><button id="restoran-button">Ресторанні страви</button></a>
+        <a href="snack.html"><button id="snack-button">Швидкий Перекус</button></a>
+    </div>
+
+    <section class="facts" id="facts">
+        <h3>Цікаві факти</h3>
+        <div class="info-box">
+        <ul>
+            <li>Свіжі інгредієнти: Наші страви готуються зі свіжих інгредієнтів, щоб забезпечити бездоганний смак і якість.</li>
+            <li>Органічні продукти: Ми підтримуємо здорове харчування, використовуючи лише органічні інгредієнти від перевірених постачальників.</li>
+            <li>Масштаб обслуговування: Щодня BORYSLAV0 обслуговує понад 500 гостей, даруючи незабутній гастрономічний досвід.</li>
+            <li>Унікальна концепція: BORYSLAV0 — це платформа, яка дозволяє об'єднати замовлення з різних закладів в одне, щоб ви отримали все зручно і швидко.</li>
+            <li>Економія часу: Ми допомагаємо зберегти ваш час, дозволяючи обрати страви з кількох місць за кілька кліків.</li>
+            <li>Турбота про клієнта: Ми створили проєкт, де гастрономія зустрічається з творчістю, щоб кожен клієнт отримував незабутній досвід.</li>
+            <li>Індивідуальний підхід: Ви можете легко підібрати страви на будь-який смак і бюджет, обираючи з широкого асортименту меню.</li>
+            <li>BORYSLAV0 — швидко, зручно, смачно!</li>
+        </ul>
+        </div>
+        
+    </section>
+
+    <section class="about" id="about">
+        <h3>Про нас</h3>
+        <div class="text-box">
+            <p>BORYSLAV0 — це місце, де гастрономія зустрічається з творчістю. Ми створюємо незабутній смак для кожного відвідувача.
+        
+            Наша спілка різних постачальників об'єдналася в спільний проєкт BORYSLAV0. Ми пропонуємо унікальну можливість замовити страви з різних закладів одночасно, але зручно отримати все разом, як ніби з одного місця.
+            
+            У чому сенс? Вам більше не потрібно витрачати час на пошуки окремих ресторанів та поетапне додавання страв у різних сервісах. У BORYSLAV0 ви можете всього за кілька кліків сформувати замовлення з різноманітних меню, заощадивши свій час і зусилля.
+            
+            BORYSLAV0 — швидко, зручно, смачно!</p>
+        </div>
+    </section>
+</main>
+
+<div id="modal-overlay" onclick="closeModal()"></div>
+<div id="order-modal">
+    <div class="modal-content">
+        <button id="close-modal" onclick="closeModal()">Закрити</button>
+    <form id="order-form" onsubmit="submitOrder(event)">
+        <h3>Оформлення замовлення</h3>
+
+        <label for="category">Оберіть категорію:</label>
+        <select id="category" onchange="updateMenu(this)">
+            <option value="">Оберіть...</option>
+            <option value="water">Напої</option>
+            <option value="restaurant">Ресторанні страви</option>
+            <option value="snack">Швидкий Перекус</option>
+        </select>
+
+        <!-- Меню страв з чекбоксами -->   
+        <div id="menu-list">
+            <!-- Тут з'являтимуться страви на основі вибраної категорії -->
+        </div>
+        <div id="modal-overlay" class="hidden"></div>
+
+        <div id="order-summary">
+            <h4>Ваше замовлення:</h4>
+            <ul id="selected-items">
+                <!-- Вибрані страви -->
+            </ul>
+            <p id="total-price">Загальна вартість: 0 грн</p>
+        </div>
+        <button type="submit">Оформити замовлення</button>
+    </form>
+    </div>
+    </div>
+<footer>
+    <p> © 2024 BORYSLAV0. Усі права захищено.</p>
+    <p>  Телефон: 067 343 4444;</p>
+</footer>
+
+<script>
+    // Функція для автоматичного відкриття модального вікна
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('openModal') === 'true') {
+            openModal(); // Викликаємо функцію відкриття модального вікна
+        }
+    };
+
+    // Приклад функції openModal
+    function openModal() {
+        // Реалізуйте тут відкриття вашого модального вікна
+        const modal = document.getElementById('modal'); // Замініть 'modal' на ID вашого модального вікна
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    }
+</script>
+<script src="script.js"></script>
+</body>
+</html>
