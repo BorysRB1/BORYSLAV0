@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORYSLAV0 - Waters</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+        <a href="boryslav0.html">
+        <button type="submit" class="button" role="button"><img src="golovna/pig.jpg" alt=""></button>
+        </a>
+    <nav>
+       <!-- Посилання на різні меню -->
+       <div style="border: 1px solid #c54111; padding: 5px; display: inline-block;">
+        <p style="margin: 0; font-weight: bold;">Посилання на різні меню:</p>
+        <a href="waters.html" style="margin: 0 5px;">Напої</a>
+        <a href="restoran.html" style="margin: 0 5px;">Ресторанні страви</a>
+        <a href="snack.html" style="margin: 0 5px;">Швидкий Перекус</a>
+    </div>
+    </nav>
+    <div class="header-buttons">
+        <!-- Кнопка до замовлення -->
+        <button id="go-to-order" class="custom-button">Перейти до замовлення</button>
+        
+        <!-- Кнопка увійти справа -->
+        <button class="login-button" onclick="location.href='login.html'">Увійти</button>
+    </div>
+</header>
+
+<main>
+    <section class="grid">
+        <h2>Мінеральна/Звичайна вода</h2>
+        <div class="item">
+            <img src="water/буковина.png" alt="буковина">
+            <p>Буковія Квасова - 50₴</p>
+        </div>
+        <div class="item">
+            <img src="water/rocceta.png" alt="rocchetta">
+            <p>Мінеральна негазована Rocchetta - 45₴</p>
+        </div>
+        <div class="item">
+            <img src="water/gantel.png" alt="gantel">
+            <p>1 kg потужності - 76₴</p>
+        </div>
+
+        <h2>Класика квасу</h2>
+        <div class="item">
+            <img src="water/yarylo.png" alt="kvas">
+            <p>Квас Ярило - 35₴</p>
+        </div>
+        <div class="item">
+            <img src="water/лидский.png" alt="kvas1">
+            <p>Квас Лидсикй - 55₴</p>
+        </div>
+        <div class="item">
+            <img src="water/очаковский.png" alt="kvas2">
+            <p>Квас Очаковский - 65₴</p>
+        </div>
+
+        <h2>Солодкі водички</h2>
+        <div class="item">
+            <img src="water/fanta.png" alt="fanta">
+            <p>Fanta - 30₴</p>
+        </div>
+        <div class="item">
+            <img src="water/kola.png" alt="ne_kola">
+            <p>Точно не та кола - 49₴</p>
+        </div>
+        <div class="item">
+            <img src="water/baykal.png" alt="baykal">
+            <p>Байкал - 40₴</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p> © 2024 BORYSLAV0. Усі права захищено.</p>
+    <p>  Телефон: 067 343 4444;</p>
+</footer>
+<script>
+    document.getElementById('go-to-order').addEventListener('click', function () {
+        // Перенаправлення на сторінку з параметром
+        window.location.href = 'boryslav0.html?openModal=true';
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
