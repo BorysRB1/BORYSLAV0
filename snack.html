@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORYSLAV0 - snack</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+        <a href="boryslav0.html">
+        <button type="submit" class="button" role="button"><img src="golovna/pig.jpg" alt=""></button>
+        </a>
+    <nav>
+        <!-- Посилання на різні меню -->
+        <div>
+            <p style="margin: 0; font-weight: bold;">Посилання на різні меню:</p>
+            <a href="waters.html" style="margin: 0 5px;">Напої</a>
+            <a href="restoran.html" style="margin: 0 5px;">Ресторанні страви</a>
+            <a href="snack.html" style="margin: 0 5px;">Швидкий Перекус</a>
+        </div>
+    </nav>
+    <div class="header-buttons">
+       <!-- Кнопка до замовлення -->
+       <button id="go-to-order" class="custom-button">Перейти до замовлення</button>
+        
+        <!-- Кнопка увійти справа -->
+        <button class="login-button" onclick="location.href='login.html'">Увійти</button>
+    </div>
+</header>
+
+<main>
+    <section class="grid">
+        <h2>Піцци</h2>
+        <div class="item">
+            <img src="snack/Піца “4 сири”1.jpg" alt="pizza">
+            <p>Піца “4 сири” - 330₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/Піца “Скіфська фірмова”1.jpg" alt="pizza1">
+            <p>Піца “Скіфська фірмова” - 260₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/pizza3.jpg" alt="pizza2">
+            <p>Піца “Сирно томатна”- 220₴</p>
+        </div>
+
+        <h2>Крутий закусь</h2>
+        <div class="item">
+            <img src="snack/Бургер з картоплею.png" alt="burger">
+            <p>Бургер з картоплею - 240₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/Нагетси з соусом BBQ.png" alt="nagets">
+            <p>Нагетси з соусом BBQ - 145₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/Шашлик з курки.png" alt="barbecue">
+            <p>Шашлик з курки - 145₴</p>
+        </div>
+
+        <h2>Гарнір</h2>
+        <div class="item">
+            <img src="snack/Картопля Фрі.png" alt="fri">
+            <p>Картопля Фрі - 95₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/Картопля молода з сиром.png" alt="potato">
+            <p>Картопля молода з сиром - 165₴</p>
+        </div>
+        <div class="item">
+            <img src="snack/Сулугуні в тісті на мангалі.jpg" alt="sugulini">
+            <p>Сулугуні в тісті на мангалі - 160₴</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p> © 2024 BORYSLAV0. Усі права захищено.</p>
+    <p>  Телефон: 067 343 4444;</p>
+</footer>
+<script>
+    document.getElementById('go-to-order').addEventListener('click', function () {
+        // Перенаправлення на сторінку з параметром
+        window.location.href = 'boryslav0.html?openModal=true';
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
